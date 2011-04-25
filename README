@@ -1,0 +1,7 @@
+;; ex)
+(require 'toggle-ansi-term-mode "ansi-term-util.el")
+(add-hook `term-mode-hook
+          `(lambda ()
+             (progn
+               (define-key term-raw-map "\C-t" `toggle-ansi-term-mode)
+               (define-key term-mode-map "\C-t" `toggle-ansi-term-mode))))
